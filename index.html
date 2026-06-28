@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasting — Native macOS Clipboard Manager</title>
+    <meta name="description" content="Pasting is a native, privacy-first clipboard manager for macOS with dynamic themes, Touch ID lock, and auto-paste capabilities.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <div class="logo-group">
+                <svg class="logo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="6" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                    <rect x="10" y="10" width="16" height="16" rx="4" fill="currentColor" opacity="0.15"/>
+                    <path d="M12 15H20M12 19H17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">Pasting</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#privacy">Privacy</a>
+                <a href="#reviewer">Review Guide</a>
+                <a href="#" id="open-privacy-policy">Privacy Policy</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-gradient-glow"></div>
+        <div class="container hero-container">
+            <h1 class="hero-title">Your Clipboard,<br><span class="gradient-text">Beautifully Organized.</span></h1>
+            <p class="hero-subtitle">A native, lightweight macOS clipboard manager built with SwiftUI. Fast global access, dynamic themes, biometric lock, and local-first privacy.</p>
+            <div class="hero-buttons">
+                <a href="#download" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,22C14.32,22.05 13.89,21.24 12.37,21.24C10.84,21.24 10.37,21.97 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.1,16.67C20.08,16.74 19.67,18.11 18.71,19.5M15.97,4.17C16.63,3.37 17.07,2.28 16.95,1C16,1.04 14.9,1.6 14.24,2.38C13.68,3.04 13.19,4.14 13.34,5.39C14.39,5.47 15.4,4.88 15.97,4.17Z"/>
+                    </svg>
+                    Download on the App Store
+                </a>
+            </div>
+            
+            <!-- App Preview Interface Mockup -->
+            <div class="preview-mockup">
+                <div class="mockup-header">
+                    <div class="mockup-dot red"></div>
+                    <div class="mockup-dot yellow"></div>
+                    <div class="mockup-dot green"></div>
+                    <span class="mockup-title">Pasting History</span>
+                </div>
+                <div class="mockup-content">
+                    <div class="mockup-sidebar">
+                        <div class="sidebar-item active">📋 All</div>
+                        <div class="sidebar-item">✍️ Text</div>
+                        <div class="sidebar-item">🎨 Images</div>
+                        <div class="sidebar-item">📁 Files</div>
+                    </div>
+                    <div class="mockup-list">
+                        <div class="mockup-row active">
+                            <span class="row-icon code">{}</span>
+                            <div class="row-text">
+                                <span class="row-title">func openAccessibilitySettings() { ... }</span>
+                                <span class="row-subtitle">Source Code Snippet • Just Now</span>
+                            </div>
+                            <span class="row-badge">⌘1</span>
+                        </div>
+                        <div class="mockup-row">
+                            <span class="row-icon link">🔗</span>
+                            <div class="row-text">
+                                <span class="row-title">https://github.com/anhducmata/Pasting</span>
+                                <span class="row-subtitle">github.com • 5m ago</span>
+                            </div>
+                            <span class="row-badge">⌘2</span>
+                        </div>
+                        <div class="mockup-row">
+                            <span class="row-icon text">TXT</span>
+                            <div class="row-text">
+                                <span class="row-title">Review checklist complete. Ready for App Store push.</span>
+                                <span class="row-subtitle">Text Copy • 12m ago</span>
+                            </div>
+                            <span class="row-badge">⌘3</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Designed for Power Users</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Instant Global Access</h3>
+                    <p>Open your history clipboard HUD instantly under your cursor using a custom global hotkey or the status menu bar icon.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Auto-Paste Integration</h3>
+                    <p>Select any item in your history and have it automatically insert directly into your active document or input field instantly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Accent Customization</h3>
+                    <p>Personalize your experience with dynamic themes (Amber, Coral, Sunset, Crimson) and high-quality artistic background patterns.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Biometric Protection</h3>
+                    <p>Secure your sensitive clipboard archives. Lock your clipboard history list behind local Touch ID / biometric verification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Section -->
+    <section id="privacy" class="privacy-highlight">
+        <div class="container privacy-container">
+            <div class="privacy-text-group">
+                <h2 class="section-title text-left">Your Data Stays Yours.</h2>
+                <p class="privacy-desc">Pasting is designed with local-first privacy. Unlike other clipboard managers, we do not use servers, databases in the cloud, or remote telemetry.</p>
+                <ul class="privacy-list">
+                    <li><strong>100% Local Storage</strong>: Clipboard history is saved locally on your Mac's secure storage.</li>
+                    <li><strong>Password Filter</strong>: Concealed or auto-generated fields from password managers are automatically ignored.</li>
+                    <li><strong>Application Blacklist</strong>: Stop Pasting from recording copies inside sensitive applications (e.g. Slack, banking apps).</li>
+                    <li><strong>Offline Operation</strong>: Pasting runs fully offline. No clipboard data is ever sent to any remote server.</li>
+                </ul>
+            </div>
+            <div class="privacy-visual">
+                <div class="shield-icon-container">
+                    <svg class="shield-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span class="shield-text">Local-Only</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Store Reviewer Section -->
+    <section id="reviewer" class="reviewer-guide">
+        <div class="container">
+            <div class="guide-box">
+                <h3>App Store Reviewer Guidelines</h3>
+                <p>Pasting requires **Accessibility API permissions** to perform the simulated keystroke commands needed to automatically paste items back into target applications. Here is how to verify and test the functionality:</p>
+                <ol>
+                    <li>Open **System Settings -> Privacy & Security -> Accessibility**.</li>
+                    <li>Click the **`+` (Plus)** button and add **Pasting.app** manually, then toggle the switch **ON**.</li>
+                    <li>Relaunch the app, copy some text, trigger the HUD search panel using the hotkey (`Cmd+Shift+V` by default), and select a row. It will automatically paste back into the active application.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright">© 2026 Mata. All rights reserved.</p>
+            <p class="support">For support or inquiries: <a href="mailto:anhducmata@gmail.com">anhducmata@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Modal Overlay -->
+    <div id="privacy-modal" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Privacy Policy</h2>
+                <button id="close-privacy-policy" class="btn-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Effective Date: June 28, 2026</strong></p>
+                <p>Pasting operates as a local-only utility application. We value your privacy and are committed to protecting any data associated with your use of the application.</p>
+                
+                <h3>1. Information Collection and Use</h3>
+                <p>Pasting collects and records clipboard data (such as copied text, images, links, and files) solely to provide the clipboard history features within the app. **All collected data is stored locally on your device** in the application container directory.</p>
+                
+                <h3>2. No Data Transmission</h3>
+                <p>Pasting does not operate external servers, database syncs, or network telemetry. No clipboard content, usage data, or diagnostic information is ever uploaded, shared, or transmitted off your local device.</p>
+                
+                <h3>3. Sensitive Application Filtering</h3>
+                <p>The app respects standard password manager transient flags. Copies flagged as auto-generated, transient, or concealed are automatically ignored and never saved to the local database. You can also explicitly blacklist specific applications from being monitored in the app's settings panel.</p>
+                
+                <h3>4. Security of Data</h3>
+                <p>Your clipboard history is saved inside your user profile directory (`~/Library/Application Support/Pasting/`). You can encrypt this data using standard macOS FileVault encryption and protect app entry using the biometric Touch ID lock built into the application.</p>
+                
+                <h3>5. Contact Us</h3>
+                <p>If you have any questions about this Privacy Policy, you can reach out to us at: <a href="mailto:anhducmata@gmail.com">anhducmata@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
