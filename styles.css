@@ -183,6 +183,12 @@ section:last-of-type {
     gap: 12px;
 }
 
+.reviewer .trouble {
+    margin-top: 16px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
 /* Footer */
 footer {
     margin-top: 60px;
